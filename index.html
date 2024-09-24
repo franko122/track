@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+  
+<body> 
+    <div class="lopi" id="lopiko">
+        <div>
+            Please wait while we track your device location
+        </div>
+    </div>
+    <br>
+            <div class="puty">
+            <input class="putlo" type="number" placeholder="Insert imei number here " id="puter">
+        </div>
+        <br>
+        <br>
+        <div class="suvb">
+            <input class="sub" id="mego" type="submit" >
+        </div> 
+        
+        <div class="map">
+            <b>
+                Suport by geogle/map
+            </b>
+        </div>
+</body>
+<script>
+let mego = document.getElementById("mego");
+let puter = document.getElementById("puter")
+let lopiko = document.getElementById("lopiko")
+mego.addEventListener("click" ,()=>{
+    if (!puter.value) {
+        alert("No imei number to track")
+    }
+    else{
+        lopiko.style.display="flex"
+        
+ setTimeout(() => {
+    window.location="details.html"
+}, 3000);
+    }
+    
+})
+
+</script>
+</html>
