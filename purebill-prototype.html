@@ -1,169 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Pure Bill | Water Booking Dashboard</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Segoe UI", sans-serif;
-    }
-
-    body {
-      background-color: #f4f4f9;
-    }
-
-    /* Navbar */
-    .navbar {
-      background: purple;
-      color: white;
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .brand {
-      font-size: 22px;
-      font-weight: bold;
-    }
-
-    .nav-buttons {
-      display: flex;
-      gap: 10px;
-    }
-
-    .nav-buttons button {
-      background: white;
-      color: purple;
-      border: none;
-      padding: 8px 14px;
-      border-radius: 20px;
-      cursor: pointer;
-      font-weight: 600;
-    }
-
-    .balance {
-      background: #fff;
-      color: purple;
-      padding: 6px 14px;
-      border-radius: 20px;
-      font-weight: bold;
-    }
-
-    /* Dashboard */
-    .container {
-      padding: 20px;
-    }
-
-    h2 {
-      margin-bottom: 15px;
-      color: #333;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 15px;
-    }
-
-    .card {
-      background: white;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    .card h3 {
-      color: purple;
-      margin-bottom: 10px;
-    }
-
-    .card p {
-      color: #555;
-      margin-bottom: 15px;
-    }
-
-    .card button {
-      background: purple;
-      color: white;
-      border: none;
-      padding: 10px;
-      width: 100%;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: 600;
-    }
-
-    .card button:hover {
-      opacity: 0.9;
-    }
-
-    /* Footer */
-    .footer {
-      text-align: center;
-      padding: 15px;
-      color: #777;
-      font-size: 14px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Booking Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .nav a:hover {
+            color: #ccc;
+        }
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .service {
+            width: 30%;
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .service img {
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+        }
+    </style>
 </head>
 <body>
-
-  <!-- Navbar -->
-  <div class="navbar">
-    <div class="brand">Pure Bill</div>
-
-    <div class="nav-buttons">
-      <button>Dashboard</button>
-      <button>Bookings</button>
-      <button>History</button>
-      <button>Profile</button>
+    <div class="nav">
+        <a href="           
+        <a href="#">About</a>
+        <a href="              
     </div>
-
-    <div class="balance">Balance: ₦25,000</div>
-  </div>
-
-  <!-- Dashboard -->
-  <div class="container">
-    <h2>Water Booking Dashboard</h2>
-
-    <div class="cards">
-      <div class="card">
-        <h3>Small Tank</h3>
-        <p>500 Litres of clean water</p>
-        <button>Book Now</button>
-      </div>
-
-      <div class="card">
-        <h3>Medium Tank</h3>
-        <p>1,000 Litres of clean water</p>
-        <button>Book Now</button>
-      </div>
-
-      <div class="card">
-        <h3>Large Tank</h3>
-        <p>2,000 Litres of clean water</p>
-        <button>Book Now</button>
-      </div>
-
-      <div class="card">
-        <h3>Custom Order</h3>
-        <p>Choose your own quantity</p>
-        <button>Customize</button>
-      </div>
+    <div class="container">
+        <h1>Water Booking Dashboard</h1>
+        <div class="services">
+            <div class="service">
+                <img src="airtime-icon.png" alt="Airtime">
+                <h2>Buy Airtime</h2>
+                <p>Top up your phone with ease</p>
+            </div>
+            <div class="service">
+                <img src="bill-icon.png" alt="Bills">
+                <h2>Pay Bills</h2>
+                <p>Pay your bills quickly and securely</p>
+            </div>
+            <div class="service">
+                <img src="giftcard-icon.png" alt="Gift Card">
+                <h2>Buy Gift Card</h2>
+                <p>Purchase gift cards for your loved ones</p>
+            </div>
+        </div>
     </div>
-  </div>
-
-  <!-- Footer -->
-  <div class="footer">
-    © 2026 Pure Bill. Clean Water, Easy Booking.
-  </div>
-
 </body>
-  </html>
-  
+</html>
