@@ -1,84 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Water Booking Dashboard</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .nav {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
-        .nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-        .nav a:hover {
-            color: #ccc;
-        }
-        .services {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        .service {
-            width: 30%;
-            margin: 20px;
-            padding: 20px;
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .service img {
-            width: 50px;
-            height: 50px;
-            margin: 10px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Responsive Navbar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f4f4f4;
+    }
+
+    /* Navbar */
+    nav {
+      background: purple;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    /* Menu */
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* Mobile menu button */
+    .menu-btn {
+      display: none;
+      font-size: 26px;
+      cursor: pointer;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      ul {
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background: purple;
+        flex-direction: column;
+        text-align: center;
+        display: none;
+      }
+
+      ul li {
+        padding: 15px 0;
+        border-top: 1px solid rgba(255,255,255,0.2);
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      #menu-toggle:checked + ul {
+        display: flex;
+      }
+    }
+
+    /* Hide checkbox */
+    #menu-toggle {
+      display: none;
+    }
+  </style>
 </head>
 <body>
-    <div class="nav">
-        <a href="           
-        <a href="#">About</a>
-        <a href="              
-    </div>
-    <div class="container">
-        <h1>Water Booking Dashboard</h1>
-        <div class="services">
-            <div class="service">
-                <img src="airtime-icon.png" alt="Airtime">
-                <h2>Buy Airtime</h2>
-                <p>Top up your phone with ease</p>
-            </div>
-            <div class="service">
-                <img src="bill-icon.png" alt="Bills">
-                <h2>Pay Bills</h2>
-                <p>Pay your bills quickly and securely</p>
-            </div>
-            <div class="service">
-                <img src="giftcard-icon.png" alt="Gift Card">
-                <h2>Buy Gift Card</h2>
-                <p>Purchase gift cards for your loved ones</p>
-            </div>
-        </div>
-    </div>
+
+  <nav>
+    <div class="logo">Pure Bill</div>
+
+    <label for="menu-toggle" class="menu-btn">&#9776;</label>
+    <input type="checkbox" id="menu-toggle">
+
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Bookings</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
 </body>
 </html>
