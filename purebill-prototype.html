@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pure Bill | Water Booking Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f9;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: purple;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .nav-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .nav-buttons button {
+      background: white;
+      color: purple;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .balance {
+      background: #fff;
+      color: purple;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+
+    /* Dashboard */
+    .container {
+      padding: 20px;
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+      color: purple;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .card button {
+      background: purple;
+      color: white;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .card button:hover {
+      opacity: 0.9;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 15px;
+      color: #777;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="brand">Pure Bill</div>
+
+    <div class="nav-buttons">
+      <button>Dashboard</button>
+      <button>Bookings</button>
+      <button>History</button>
+      <button>Profile</button>
+    </div>
+
+    <div class="balance">Balance: ₦25,000</div>
+  </div>
+
+  <!-- Dashboard -->
+  <div class="container">
+    <h2>Water Booking Dashboard</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Small Tank</h3>
+        <p>500 Litres of clean water</p>
+        <button>Book Now</button>
+      </div>
+
+      <div class="card">
+        <h3>Medium Tank</h3>
+        <p>1,000 Litres of clean water</p>
+        <button>Book Now</button>
+      </div>
+
+      <div class="card">
+        <h3>Large Tank</h3>
+        <p>2,000 Litres of clean water</p>
+        <button>Book Now</button>
+      </div>
+
+      <div class="card">
+        <h3>Custom Order</h3>
+        <p>Choose your own quantity</p>
+        <button>Customize</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    © 2026 Pure Bill. Clean Water, Easy Booking.
+  </div>
+
+</body>
+  </html>
+  
