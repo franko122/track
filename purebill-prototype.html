@@ -12,7 +12,65 @@
       box-sizing: border-box;
       font-family: Arial, sans-serif;
     }
+/* Base reset */
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
 
+/* Container for the two buttons */
+.action-buttons {
+  display: flex;
+  gap: 15px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Shared button styles */
+.btn {
+  border: none;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 140px;
+}
+
+/* Transfer button */
+.transfer {
+  background: rgb(20, 31, 89);
+  color: #ffffff;
+}
+
+/* Add Funds button */
+.add-funds {
+  background: transparent;
+  color: rgb(20, 31, 89);
+  border: 2px solid rgb(20, 31, 89);
+}
+
+/* Hover effect */
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(20, 31, 89, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .action-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+  }
+    }
+  
     body {
       background:rgb(20, 31, 89) ;
     }
@@ -103,6 +161,13 @@
       <div> <b> Home</b> </div>
       <div> <b> Home</b> </div>
     </ul>
+    <br>
+    <br>
+    <br>
+    <div class="action-buttons">
+    <button class="btn transfer">Transfer</button>
+    <button class="btn add-funds">Add Funds</button>
+    </div>
   </nav>
 
 </body>
