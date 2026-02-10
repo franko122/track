@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frank Developer Training</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body{
+    background: radial-gradient(circle at top left, #0b3d2e, #020817);
+    color:#fff;
+}
+
+/* MAIN CONTAINER */
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+/* HEADER */
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:40px;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#2dff9a;
+}
+
+.duration{
+    border:1px solid #2dff9a;
+    padding:12px 18px;
+    border-radius:12px;
+    text-align:center;
+}
+
+.duration span{
+    font-size:14px;
+    opacity:.8;
+}
+
+.duration h2{
+    color:#2dff
