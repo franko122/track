@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing Card</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#f5d6e6,#e6d6ff);
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* Card Container */
+.card{
+    width:300px;
+    background:#111;
+    color:white;
+    text-align:center;
+    position:relative;
+    padding-bottom:60px;
+    clip-path:polygon(0 0,100% 0,100% 90%,50% 100%,0 90%);
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* Top label */
+.plan{
+    background:#000;
+    padding:15px;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+/* Price section with triangle */
+.price-box{
+    background:#6fb0d8;
+    padding:25px 10px 40px;
+    clip-path:polygon(0 0,100% 0,100% 70%,50% 100%,0 70%);
+}
+
+.price{
+    font-size:48px;
+    font-weight:bold;
+}
+
+.per{
+    font-size:14px;
+    opacity:0.9;
+}
+
+/* Features */
+.features{
+    padding:20px;
+    text-align:left;
+}
+
+.features li{
+    list-style:none;
+    margin:15px 0;
+    display:flex;
+    align-items:center;
+    font-size:14px;
+}
+
+.check{
+    color:limegreen;
+    font-size:18px;
+    margin-right:10px;
+}
+
+.cross{
+    color:red;
+    font-size:18px;
+    margin-right:10px;
+}
+
+hr{
+    border:0;
+    height:2px;
+    background:#777;
+    margin:20px 30px;
+}
+
+/* Button */
+button{
+    background:transparent;
+    border:none;
+    color:white;
+    font-size:22px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    opacity:0.7;
+}
+</style>
+
+</head>
+<body>
+
+<div class="card">
+
+    <div class="plan">BASIC</div>
+
+    <div class="price-box">
+        <div class="price">$300</div>
+        <div class="per">Per Month</div>
+    </div>
+
+    <ul class="features">
+        <li><span class="check">✔</span> Sample Text Here</li>
+        <li><span class="cross">✖</span> Text Space Goes Here</li>
+        <li><span class="cross">✖</span> Description Space</li>
+        <li><span class="cross">✖</span> Sample Text Here</li>
+    </ul>
+
+    <hr>
+
+    <button>Buy Now</button>
+
+</div>
+
+</body>
+</html>
