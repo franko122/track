@@ -28,6 +28,74 @@ body{
     box-shadow:0 10px 25px rgba(0,0,0,0.4);
 }
 
+You said:
+design a description section box with HTML and CSS in once file 
+
+ChatGPT said:
+Here’s a clean Description Section Box designed with HTML + CSS in one file. It’s modern, responsive, and easy to customize.
+
+You can copy and save it as index.html and open in your browser.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Description Box</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #4b2cff, #7a5cff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .description-box {
+      background: white;
+      width: 90%;
+      max-width: 500px;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .description-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    }
+
+    .description-box h2 {
+      margin-bottom: 15px;
+      color: #4b2cff;
+    }
+
+    .description-box p {
+      color: #555;
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: #4b2cff;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #3720c9;
+    }
 /* Top label */
 .plan{
     background:#000;
@@ -128,6 +196,14 @@ button:hover{
 </div>
     <br>
     <br>
-<div style="color:red; text-align:center;"> Offer expire on 1st march 2026</div>
+<div style="color:red; text-align:center;"> Offer expires on 1st march 2026</div>
+    <div class="description-box">
+    <h2>About Our Service</h2>
+    <p>
+      This is to comfirm that jeniliaya jeni is worth and has a valid subscription 
+    member card for the 2026 honour intership vacation pls kindly click on buy now to subscript Thanks 
+    <a href="#" class="btn">Learn More</a>
+    </div>
+    
 </body>
 </html>
