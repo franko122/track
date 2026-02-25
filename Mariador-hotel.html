@@ -1,1 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luxury Hotel</title>
 
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#000;
+    color:#fff;
+}
+
+/* NAVBAR */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    position:absolute;
+    width:100%;
+    z-index:10;
+}
+
+.logo{
+    color:#d4af37;
+    font-size:22px;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav ul li{
+    cursor:pointer;
+    transition:0.3s;
+}
+
+nav ul li:hover{
+    color:#d4af37;
+}
+
+/* HERO */
+.hero{
+    height:80vh;
+    background:url("https://images.unsplash.com/photo-1566073771259-6a8506099945") center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    position:relative;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.6);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.btn{
+    padding:12px 25px;
+    border:1px solid #d4af37;
+    background:transparent;
+    color:#fff;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#d4af37;
+    color:#000;
+}
+
+/* BOOKING BAR */
+.booking{
+    background:#111;
+    padding:20px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.booking input, .booking select{
+    padding:10px;
+    background:#000;
+    border:1px solid #333;
+    color:#fff;
+}
+
+.booking button{
+    background:#d4af37;
+    border:none;
+    padding:10px 20px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+/* ROOMS */
+.section{
+    padding:60px 8%;
+    text-align:center;
+}
+
+.section h2{
+    margin-bottom:40px;
+}
+
+.rooms{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.room{
+    background:#111;
+    border:1px solid #222;
+    transition:0.3s;
+}
+
+.room:hover{
+    transform:translateY(-5px);
+}
+
+.room img{
+    width:100%;
+    height:160px;
+    object-fit:cover;
+}
+
+.room p{
+    padding:10px;
+}
+
+/* VIDEO */
+.video{
+    height:300px;
+    background:url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e") center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.play{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background:#fff;
+    color:#000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:30px;
+}
+
+/* BLOG SOCIAL GALLERY */
+.grid3{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    padding:60px 8%;
+}
+
+.card{
+    background:#111;
+    padding:20px;
+}
+
+.social div{
+    padding:15px;
+    margin:10px 0;
+    text-align:center;
+    font-weight:bold;
+}
+
+.facebook{background:#3b5998;}
+.twitter{background:#1da1f2;}
+.instagram{background:#c13584;}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:5px;
+}
+
+.gallery img{
+    width:100%;
+    height:70px;
+    object-fit:cover;
+}
+
+/* FOOTER */
+footer{
+    background:#0a0a0a;
+    padding:40px 8%;
+    text-align:center;
+    color:#aaa;
+}
+
+footer h3{
+    color:#d4af37;
+    margin-bottom:10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">LOREM HOTEL</div>
+    <ul>
+        <li>Home</li>
+        <li>Rooms</li>
+        <li>Events</li>
+        <li>Blog</li>
+        <li>Contact</li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>DISCOVER OUR ROOMS</h1>
+        <button class="btn">View Details</button>
+    </div>
+</section>
+
+<div class="booking">
+    <input type="date">
+    <input type="date">
+    <select>
+        <option>1 Adult</option>
+        <option>2 Adults</option>
+    </select>
+    <select>
+        <option>Room Type</option>
+    </select>
+    <button>Make Reservation</button>
+</div>
+
+<section class="section">
+    <h2>Our Room Kinds</h2>
+    <div class="rooms">
+        <div class="room">
+            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85">
+            <p>Family Room</p>
+        </div>
+        <div class="room">
+            <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a">
+            <p>Twin Room</p>
+        </div>
+        <div class="room">
+            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427">
+            <p>Double Room</p>
+        </div>
+        <div class="room">
+            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
+            <p>Single Room</p>
+        </div>
+    </div>
+</section>
+
+<section class="video">
+    <div class="play">▶</div>
+</section>
+
+<div class="grid3">
+
+    <div class="card">
+        <h3>Blog</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+
+    <div class="card social">
+        <h3>Social Media</h3>
+        <div class="facebook">Facebook</div>
+        <div class="twitter">Twitter</div>
+        <div class="instagram">Instagram</div>
+    </div>
+
+    <div class="card">
+        <h3>Gallery</h3>
+        <div class="gallery">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+            <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+            <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e">
+            <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429">
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <h3>LOREM HOTEL</h3>
+    <p>Luxury & Comfort</p>
+    <p>© 2026 All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
