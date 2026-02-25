@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mariador Hotel Dashboard</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#050505;
+    color:white;
+}
+
+/* HEADER */
+.header{
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.header h1{
+    font-size:24px;
+    color:#d4af37;
+}
+
+.icons span{
+    margin-left:15px;
+    font-size:22px;
+}
+
+/* BALANCE CARD */
+.card{
+    margin:20px;
+    padding:25px;
+    border-radius:20px;
+    background:linear-gradient(135deg,#111,#1c1c1c);
+    box-shadow:0 0 20px rgba(212,175,55,0.2);
+}
+
+.price{
+    font-size:40px;
+    font-weight:bold;
+    margin-bottom:20px;
+    color:#d4af37;
+}
+
+.btn-row{
+    display:flex;
+    gap:15px;
+}
+
+.btn{
+    flex:1;
+    padding:15px;
+    border-radius:12px;
+    border:none;
+    cursor:pointer;
+    font-size:16px;
+    background:#222;
+    color:white;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#d4af37;
+    color:black;
+}
+
+/* GRID SERVICES */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    padding:20px;
+}
+
+.service{
+    background:#111;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+    transition:.3s;
+}
+
+.service:hover{
+    transform:translateY(-5px);
+    background:#1a1a1a;
+}
+
+.service span{
+    font-size:28px;
+    display:block;
+    margin-bottom:10px;
+}
+
+/* BOOKING SECTION */
+.booking{
+    margin:20px;
+    padding:25px;
+    border-radius:20px;
+    background:linear-gradient(135deg,#111,#1c1c1c);
+}
+
+.booking h2{
+    margin-bottom:10px;
+}
+
+.booking p{
+    color:#bbb;
+    margin-bottom:20px;
+}
+
+.book-btn{
+    background:#d4af37;
+    border:none;
+    padding:12px 20px;
+    border-radius:10px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* OFFER */
+.offer{
+    margin:20px;
+    padding:20px;
+    border-radius:15px;
+    background:#111;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+/* FOOTER NAV */
+.nav{
+    position:fixed;
+    bottom:0;
+    width:100%;
+    background:#0a0a0a;
+    display:flex;
+    justify-content:space-around;
+    padding:10px 0;
+    border-top:1px solid #222;
+}
+
+.nav div{
+    text-align:center;
+    font-size:12px;
+    color:#aaa;
+}
+
+.nav span{
+    display:block;
+    font-size:20px;
+}
+
+/* FORM MODAL */
+.modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.7);
+    display:none;
+    justify-content:center;
+    align-items:center;
+}
+
+.modal-content{
+    background:#111;
+    padding:25px;
+    border-radius:15px;
+    width:90%;
+    max-width:350px;
+}
+
+.modal-content input,
+.modal-content select{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    background:#000;
+    border:1px solid #333;
+    color:white;
+}
+
+.close{
+    float:right;
+    cursor:pointer;
+    color:#d4af37;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>Mariador Hotel</h1>
+    <div class="icons">
+        <span>🔔</span>
+        <span>👤</span>
+    </div>
+</div>
+
+<div class="card">
+    <div class="price">Luxury Rooms</div>
+    <div class="btn-row">
+        <button class="btn" onclick="openModal()">Book Room</button>
+        <button class="btn">My Reservations</button>
+    </div>
+</div>
+
+<div class="grid">
+    <div class="service"><span>🏨</span>Rooms</div>
+    <div class="service"><span>🍽️</span>Restaurant</div>
+    <div class="service"><span>🚕</span>Transport</div>
+    <div class="service"><span>💳</span>Payments</div>
+    <div class="service"><span>📞</span>Support</div>
+    <div class="service"><span>⭐</span>Reviews</div>
+</div>
+
+<div class="booking">
+    <h2>Hotel Booking</h2>
+    <p>Reserve your luxury stay now</p>
+    <button class="book-btn" onclick="openModal()">Book Now →</button>
+</div>
+
+<div class="offer">
+    <div>
+        <strong>Special Offer</strong><br>
+        20% Discount This Week
+    </div>
+    <button class="book-btn">View</button>
+</div>
+
+<!-- MODAL BOOKING FORM -->
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">✖</span>
+        <h3>Book a Room</h3>
+
+        <input type="text" placeholder="Full Name">
+        <input type="date">
+        <input type="date">
+
+        <select>
+            <option>Single Room</option>
+            <option>Double Room</option>
+            <option>Family Suite</option>
+        </select>
+
+        <button class="book-btn" onclick="bookNow()">Confirm Booking</button>
+    </div>
+</div>
+
+<!-- BOTTOM NAV -->
+<div class="nav">
+    <div><span>🏠</span>Home</div>
+    <div><span>📅</span>Bookings</div>
+    <div><span>🏨</span>Rooms</div>
+    <div><span>💬</span>Chats</div>
+    <div><span>👤</span>Profile</div>
+</div>
+
+<script>
+function openModal(){
+    document.getElementById("modal").style.display="flex";
+}
+
+function closeModal(){
+    document.getElementById("modal").style.display="none";
+}
+
+function bookNow(){
+    alert("Room booked successfully at Mariador Hotel!");
+    closeModal();
+}
+</script>
+
+</body>
+  </html>
