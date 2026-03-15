@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Device Registration Form</title>
+
+<style>
+
+*{
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#f2f5f9;
+}
+
+.form-box{
+  background:white;
+  padding:30px;
+  width:350px;
+  border-radius:10px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+
+h2{
+  text-align:center;
+  margin-bottom:20px;
+}
+
+label{
+  display:block;
+  margin-top:10px;
+  font-size:14px;
+}
+
+input{
+  width:100%;
+  padding:10px;
+  margin-top:5px;
+  border:1px solid #ccc;
+  border-radius:6px;
+}
+
+input:focus{
+  outline:none;
+  border-color:#007bff;
+}
+
+button{
+  width:100%;
+  margin-top:20px;
+  padding:12px;
+  border:none;
+  background:#007bff;
+  color:white;
+  font-size:16px;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#0056b3;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="form-box">
+
+<h2>Device Information</h2>
+
+<form>
+
+<label>IMEI Number</label>
+<input type="text" placeholder="Enter IMEI number" required>
+
+<label>Serial Number</label>
+<input type="text" placeholder="Enter Serial number" required>
+
+<label>Email Address</label>
+<input type="email" placeholder="Enter email address" required>
+
+<label>Phone Number</label>
+<input type="tel" placeholder="Enter phone number" required>
+
+<button type="submit">Submit</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
