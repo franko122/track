@@ -167,6 +167,49 @@ button{
 button:hover{
     opacity:0.7;
 }
+    
+    .buy-btn{
+        padding:15px 40px;
+        font-size:18px;
+        color:white;
+        border:none;
+        border-radius:50px;
+        cursor:pointer;
+        background:linear-gradient(45deg, #ff416c, #ff4b2b);
+        box-shadow:0 0 15px rgba(255,75,43,0.6);
+        transition:0.3s ease;
+        position:relative;
+        overflow:hidden;
+    }
+
+    /* Glow effect */
+    .buy-btn::before{
+        content:'';
+        position:absolute;
+        top:0;
+        left:-100%;
+        width:100%;
+        height:100%;
+        background:rgba(255,255,255,0.2);
+        transform:skewX(-45deg);
+        transition:0.5s;
+    }
+
+    .buy-btn:hover::before{
+        left:200%;
+    }
+
+    /* Hover effect */
+    .buy-btn:hover{
+        transform:scale(1.1);
+        box-shadow:0 0 25px rgba(255,75,43,1);
+    }
+
+    /* Click effect */
+    .buy-btn:active{
+        transform:scale(0.95);
+        box-shadow:0 0 10px rgba(255,75,43,0.5);
+    }
 </style>
 
 </head>
@@ -192,8 +235,7 @@ button:hover{
 
     <hr>
 
-    <button> Message the  support now</button>
-
+    <button class="buy-btn">Buy Now</button>
 </div>
     <br>
     <br>
