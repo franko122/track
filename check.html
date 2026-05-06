@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tracking Table</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #0f172a;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .table-container {
+        background: #111827;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+        width: 90%;
+        max-width: 500px;
+    }
+
+    h2 {
+        color: #fff;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    th, td {
+        padding: 12px;
+        text-align: left;
+    }
+
+    th {
+        background: #1f2937;
+        color: #9ca3af;
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    td {
+        background: #111827;
+        color: #f3f4f6;
+        border-bottom: 1px solid #1f2937;
+    }
+
+    tr:last-child td {
+        border-bottom: none;
+    }
+
+    .status {
+        color: #22c55e;
+        font-weight: bold;
+    }
+
+    .tracking {
+        color: #3b82f6;
+        font-weight: bold;
+    }
+</style>
+
+</head>
+<body>
+
+<div class="table-container">
+    <h2>Tracking Details</h2>
+    <table>
+        <tr>
+            <th>Number</th>
+            <th>Status</th>
+            <th>Tracking ID</th>
+        </tr>
+        <tr>
+            <td>Nigerian</td>
+            <td class="status">Active</td>
+            <td class="tracking">655788888</td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>
