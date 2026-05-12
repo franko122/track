@@ -143,7 +143,7 @@ button:hover{
         <input type="text" name="imei" required>
     </div>
 
-    <button type="submit" style="color:white; background:#007bff; border:none; padding:10px 20px; cursor:pointer;">
+    <button id="btn" type="submit" style="color:white; background:#007bff; border:none; padding:10px 20px; cursor:pointer;">
         Verify Device
     </button>
 </form>
@@ -154,6 +154,14 @@ button:hover{
         |Supported by kali linux operators   <br/> cybersecurity agency @https://www.kali.org/
     </div>
 </div>
+<script> 
+    let isValuable = true;  // change this to false to test
+btn.addEventListener("click", function() {
+  if (isValuable === true) {
+  aler("device is off");
+    }
+});
 
+</script>
 </body>
 </html>
