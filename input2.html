@@ -155,10 +155,11 @@ button:hover{
     </div>
 </div>
 <script> 
+        const btn = document.getElementById("btn");
     let isValuable = true;  // change this to false to test
 btn.addEventListener("click", function() {
   if (isValuable === true) {
-  aler("device is off");
+  alert("device is off");
     }
 });
 
