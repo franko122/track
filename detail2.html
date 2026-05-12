@@ -1,1 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing Card</title>
 
+<style>
+body{
+    margin:0;
+    height:100vh;
+    
+    
+    background:linear-gradient(135deg,#f5d6e6,#e6d6ff);
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* Card Container */
+.card{
+    width:300px;
+    background:#111;
+    color:white;
+    margin:auto;
+    text-align:center;
+    position:relative;
+    padding-bottom:60px;
+    clip-path:polygon(0 0,100% 0,100% 90%,50% 100%,0 90%);
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+You said:
+design a description section box with HTML and CSS in once file 
+
+ChatGPT said:
+Here’s a clean Description Section Box designed with HTML + CSS in one file. It’s modern, responsive, and easy to customize.
+
+You can copy and save it as index.html and open in your browser.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Description Box</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #4b2cff, #7a5cff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .description-box {
+      background: white;
+      width: 90%;
+      max-width: 500px;
+      border-radius: 15px;
+      padding: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .description-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    }
+
+    .description-box h2 {
+      margin-bottom: 15px;
+      color: #4b2cff;
+    }
+
+    .description-box p {
+      color: #555;
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: #4b2cff;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #3720c9;
+    }
+/* Top label */
+.plan{
+    background:#000;
+    padding:15px;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+/* Price section with triangle */
+.price-box{
+    background:#6fb0d8;
+    padding:25px 10px 40px;
+    clip-path:polygon(0 0,100% 0,100% 70%,50% 100%,0 70%);
+}
+
+.price{
+    font-size:48px;
+    font-weight:bold;
+}
+
+.per{
+    font-size:14px;
+    opacity:0.9;
+}
+
+/* Features */
+.features{
+    padding:20px;
+    text-align:left;
+}
+
+.features li{
+    list-style:none;
+    margin:15px 0;
+    display:flex;
+    align-items:center;
+    font-size:14px;
+}
+
+.check{
+    color:limegreen;
+    font-size:18px;
+    margin-right:10px;
+}
+
+.cross{
+    color:green;
+    font-size:18px;
+    margin-right:10px;
+}
+
+hr{
+    border:0;
+    height:2px;
+    background:#777;
+    margin:20px 30px;
+}
+
+/* Button */
+button{
+    background:transparent;
+    border:none;
+    color:white;
+    font-size:22px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    opacity:0.7;
+}
+    
+    .buy-btn{
+        padding:15px 40px;
+        font-size:18px;
+        color:white;
+        border:none;
+        border-radius:50px;
+        cursor:pointer;
+        background:linear-gradient(45deg, #ff416c, #ff4b2b);
+        box-shadow:0 0 15px rgba(255,75,43,0.6);
+        transition:0.3s ease;
+        position:relative;
+        overflow:hidden;
+    }
+
+    /* Glow effect */
+    .buy-btn::before{
+        content:'';
+        position:absolute;
+        top:0;
+        left:-100%;
+        width:100%;
+        height:100%;
+        background:rgba(255,255,255,0.2);
+        transform:skewX(-45deg);
+        transition:0.5s;
+    }
+
+    .buy-btn:hover::before{
+        left:200%;
+    }
+
+    /* Hover effect */
+    .buy-btn:hover{
+        transform:scale(1.1);
+        box-shadow:0 0 25px rgba(255,75,43,1);
+    }
+
+    /* Click effect */
+    .buy-btn:active{
+        transform:scale(0.95);
+        box-shadow:0 0 10px rgba(255,75,43,0.5);
+    }
+</style>
+
+</head>
+<body>
+    <img src="/InShot_20260509_085202409.jpg" style="width:100%;">
+<br>
+    <br>
+<div class="card">
+ 
+    <div class="plan">Access location at Eke-awka market anambra state </div>
+
+    <div class="price-box">
+        <div class="price">$19</div>
+        <div class="per">3Months </div>
+    </div>
+
+    <ul class="features">
+        <li><span class="check">✔</span> Stable internet WIFI </li>
+        <li><span class="cross">✔</span> live map view </li>
+        <li><span class="cross"> ✔ </span> STABLE NETWORKS </li>
+        <li><span class="cross">✔ </span> SECURITY GAURANTED </li>
+    </ul>
+
+    <hr>
+
+    <button class="buy-btn">Buy Now</button>
+</div>
+    <br>
+    <br>
+<div style="color:red; text-align:center;"> Subscribe to start viewing on live map</div>
+       <br>
+       <br>
+    <div class="description-box">
+    
+      Note: this is a cyber-security tracking tool supported by google and chrome map
+
+        
+    </div>
+    
+</body>
+            <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6931c983b40f0c197a3061c9/1jbl7mcoa';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+  </html>
