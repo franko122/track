@@ -1,1 +1,193 @@
 
+# Modern Crypto Authentication UI (Single HTML File)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crypto Wallet Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Inter',sans-serif;
+    }
+
+    body{
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:linear-gradient(135deg,#0f172a,#111827,#1e293b);
+      overflow:hidden;
+    }
+
+    .bg-circle{
+      position:absolute;
+      width:300px;
+      height:300px;
+      border-radius:50%;
+      background:rgba(255,255,255,0.05);
+      filter:blur(20px);
+    }
+
+    .circle1{
+      top:-80px;
+      left:-60px;
+    }
+
+    .circle2{
+      bottom:-100px;
+      right:-60px;
+    }
+
+    .card{
+      position:relative;
+      width:360px;
+      padding:35px;
+      border-radius:24px;
+      background:rgba(255,255,255,0.06);
+      backdrop-filter:blur(16px);
+      border:1px solid rgba(255,255,255,0.08);
+      box-shadow:0 10px 40px rgba(0,0,0,0.35);
+      color:white;
+    }
+
+    .logo{
+      width:65px;
+      height:65px;
+      margin:auto;
+      border-radius:18px;
+      background:linear-gradient(135deg,#00c2ff,#0066ff);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:28px;
+      font-weight:700;
+      margin-bottom:18px;
+      box-shadow:0 6px 20px rgba(0,102,255,0.4);
+    }
+
+    h2{
+      text-align:center;
+      margin-bottom:8px;
+      font-size:26px;
+      font-weight:700;
+    }
+
+    p{
+      text-align:center;
+      color:#cbd5e1;
+      font-size:14px;
+      margin-bottom:28px;
+    }
+
+    .input-box{
+      margin-bottom:18px;
+    }
+
+    .input-box label{
+      display:block;
+      margin-bottom:8px;
+      font-size:14px;
+      color:#e2e8f0;
+    }
+
+    .input-box input{
+      width:100%;
+      padding:14px;
+      border:none;
+      border-radius:14px;
+      outline:none;
+      background:rgba(255,255,255,0.08);
+      color:white;
+      font-size:15px;
+      transition:0.3s;
+    }
+
+    .input-box input:focus{
+      background:rgba(255,255,255,0.12);
+      box-shadow:0 0 0 2px #3b82f6;
+    }
+
+    .btn{
+      width:100%;
+      padding:14px;
+      border:none;
+      border-radius:14px;
+      background:linear-gradient(135deg,#00c2ff,#0066ff);
+      color:white;
+      font-size:16px;
+      font-weight:600;
+      cursor:pointer;
+      transition:0.3s;
+      margin-top:8px;
+    }
+
+    .btn:hover{
+      transform:translateY(-2px);
+      opacity:0.95;
+    }
+
+    .footer{
+      text-align:center;
+      margin-top:18px;
+      font-size:13px;
+      color:#94a3b8;
+    }
+
+    .footer a{
+      color:#38bdf8;
+      text-decoration:none;
+    }
+
+    @media(max-width:420px){
+      .card{
+        width:92%;
+        padding:28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-circle circle1"></div>
+  <div class="bg-circle circle2"></div>
+
+  <div class="card">
+    <div class="logo">₿</div>
+
+    <h2>Welcome Back</h2>
+    <p>Sign in to continue securely</p>
+
+    <form>
+      <div class="input-box">
+        <label>Email Address</label>
+        <input type="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="input-box">
+        <label>Password</label>
+        <input type="password" placeholder="Enter your password" required>
+      </div>
+
+      <button class="btn">Login</button>
+    </form>
+
+    <div class="footer">
+      Secure authentication UI demo
+    </div>
+  </div>
+
+</body>
+</html>
+```
+
+This example is a safe generic authentication interface for learning HTML/CSS design. It does not collect recovery phrases, wallet seed phrases, or other sensitive financial credentials.
